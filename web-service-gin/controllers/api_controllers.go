@@ -12,6 +12,7 @@ func HelloFromDockermon(c *gin.Context) {
 }
 
 func ListContainers(c *gin.Context) {
-	list := api.ContainerList()
-	c.JSON(http.StatusOK, list)
+	container := api.ContainerList()
+
+	c.String(http.StatusOK, container)
 }
